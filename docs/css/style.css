@@ -1,0 +1,28 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.hw-links {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+}
+
+.hw-links a {
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 10rem;
+  color: #222;
+  text-transform: uppercase;
+  transition: color .4s;
+}
+
+.hw-links a:hover {
+  color: #555;
+}

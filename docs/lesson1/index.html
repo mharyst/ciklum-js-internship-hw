@@ -83,7 +83,7 @@ function filterBy() {
 
 $(document).ready(function() {
     // get the data and compile into the html template
-    $.getJSON('http://jsbooks.revolunet.com/issues.json?' + Math.random(), function(data) {
+    $.getJSON('jsbooks.json?' + Math.random(), function(data) {
         var template = $('#booktpl').html(),
             issuesWrap = $('#issueswrap');
 

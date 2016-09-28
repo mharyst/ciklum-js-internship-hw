@@ -1,0 +1,88 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+  padding: 0 30px;
+
+  .logo {
+    font-weight: 700;
+    line-height: 60px;
+  }
+
+  .search {
+    input {
+      height: 40px;
+      width: 300px;
+      font-size: 18px;
+      padding: 0 10px;
+
+      &:active,
+      &:focus {
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+
+    select {
+      height: 40px;
+      font-size: 16px;
+    }
+  }
+
+  .btn-search {
+    line-height: 60px;
+  	height: 60px;
+  	display: inline-block;
+  	background-color: #009665;
+  	color: #fff;
+    padding: 0 20px;
+
+  }
+
+  .fav-logo {
+    color: #f00;
+    font-size: 40px;
+    position: relative;
+    padding-right: 15px;
+  }
+
+  .fav-count {
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #000;
+  }
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+	align-items: center;
+  flex-wrap: wrap;
+
+  & > * {
+    margin-right: 10px;
+  }
+
+  .filters {
+    display: flex;
+  	flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+
+    & > * {
+      margin-right: 10px;
+    }
+  }
+
+  .year {
+
+    input {
+      width: 50px;
+    }
+  }
+}

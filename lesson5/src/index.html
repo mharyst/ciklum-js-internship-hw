@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Films &amp; TV Shows</title>
+  <!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+  <!-- <link rel="stylesheet" href="/css/style.css"> -->
+  <script src="https://use.fontawesome.com/b351c72f19.js"></script>
+</head>
+<body ng-controller="MainCtrl as mCtrl">
+  <header class="header">
+    <div class="logo">Films &amp; TV Shows</div>
+    <div class="search">
+      <input type="text" class="search-input" name="film" placeholder="Search" ng-model="mCtrl.searchInput">
+      <div class="filters">
+        <div class="type">
+          <label class="type-label">Type:</label>
+          <select class="type-select" ng-model="mCtrl.searchType">
+            <option value="">All</option>
+            <option value="movie">Movie</option>
+            <option value="series">Series</option>
+            <option value="episode">Episode</option>
+          </select>
+        </div>
+        <div class="year">
+          <label class="year-label" for="year">Year:</label>
+          <input type="number" id="year" name="year" class="input-year" ng-model="mCtrl.searchYear">
+        </div>
+      </div>
+      <a href="#" class="btn-search" ng-click="mCtrl.search()">Search</a>
+    </div>
+    <div class="favourite-list">
+      <span class="fav-logo"><i class="fa fa-heart" aria-hidden="true"></i><span class="fav-count">{{mCtrl.favLength}}</span></span>
+    </div>
+  </header>
+  <section class="results">
+    <div class="search-results favourite-search">
+      <div class="container">
+        <div class="film-container" id="{{film.imdbID}}" ng-repeat="film in mCtrl.favResults">
+          <h2 class="film-title">{{film.Title}}</h2>
+          <img class="poster-img" src="{{film.Poster | PosterSource }}" alt="{{film.Title}}">
+          <a href="#" onclick="return false;" class="btn-fav" ng-click="mCtrl.toggleFav(film); mCtrl.refresh()"><i class="fa fa-heart" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="search-results">
+      <div class="container">
+        <div class="film-container" id="{{film.imdbID}}" ng-repeat="film in mCtrl.results">
+          <h2 class="film-title">{{film.Title}}</h2>
+          <img class="poster-img" src="{{film.Poster | PosterSource }}" alt="{{film.Title}}">
+          <!-- <div class="poster-img" style="background: url({{film.Poster | PosterSource }})"></div> -->
+          <a href="#" onclick="return false;" class="btn-fav" ng-click="mCtrl.toggleFav(film); mCtrl.refresh()"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="pagination">
+      <a href="#" onclick="return false;" ng-repeat="page in mCtrl.pages" ng-click="mCtrl.search(page); mCtrl.setCurrentPage(page)">{{page}}</a>
+    </div>
+  </section>
+<!-- <script src="/js/main.js"></script> -->
+</body>
+</html>

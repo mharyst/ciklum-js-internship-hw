@@ -8,10 +8,11 @@ body {
 
 .hw-links {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
   width: 100%;
   height: 100vh;
-  align-items: center;
 }
 
 .hw-links a {
@@ -20,9 +21,9 @@ body {
   font-size: 10rem;
   color: #222;
   text-transform: uppercase;
-  transition: color .4s;
+  transition: color .8s;
 }
 
 .hw-links a:hover {
-  color: #555;
+  color: #009688;;
 }

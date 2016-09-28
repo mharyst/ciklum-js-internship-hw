@@ -1,6 +1,6 @@
 # Homework for the 1st lesson (using SASS, webpack, flexbox).
 
-Live version available at https://mharyst.github.io/int-lesson1/
+Live version available at https://mharyst.github.io/ciklum-js-internship-hw/lesson1/
 
 ## Development Instructions
 

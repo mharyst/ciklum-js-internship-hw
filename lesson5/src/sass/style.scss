@@ -1,12 +1,17 @@
 @import "vendor/_reset";
+@import "vendor/_bariol-font";
+@import "base/_variables";
 
 html {
   font-size: 100%;
-  font-family: "Open Sans", sans-serif;
+  font-family: $font-primary;
   font-weight: 600;
 }
 
-header,
+body {
+	padding-top: 50px;
+}
+
 section > * {
   max-width: 1200px;
   margin: 0 auto;

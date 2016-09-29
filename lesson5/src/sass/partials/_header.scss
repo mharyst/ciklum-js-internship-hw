@@ -4,8 +4,16 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  height: 100%;
   padding: 0 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  box-sizing: border-box;
+  z-index: 1;
+  border-bottom: 1px solid #eee;
 
   .logo {
     font-weight: 700;
@@ -14,36 +22,56 @@
 
   .search {
     input {
-      height: 40px;
+      height: 30px;
       width: 300px;
       font-size: 18px;
       padding: 0 10px;
+      border: 0;
+      z-index: 3;
 
       &:active,
       &:focus {
         outline: 0;
         box-shadow: none;
       }
+
+      &::-webkit-input-placeholder {
+        font: 500 16px $font-primary;
+        color: #ccc;
+      }
+      &::-moz-placeholder {
+        font: 500 16px $font-primary;
+        color: #ccc;
+      }
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
     }
 
     select {
-      height: 40px;
+      height: 30px;
       font-size: 16px;
+      border: 0;
+      color: #252525;
     }
   }
 
   .btn-search {
-    line-height: 60px;
-  	height: 60px;
+    line-height: 40px;
+  	height: 40px;
   	display: inline-block;
-  	background-color: #009665;
+  	background-color: $color-secondary;
   	color: #fff;
     padding: 0 20px;
-
+	  border-radius: $search-border-radius;
+    margin-right: 4px;
   }
 
   .fav-logo {
-    color: #f00;
+    color: $color-primary;
     font-size: 40px;
     position: relative;
     padding-right: 15px;
@@ -63,9 +91,16 @@
   flex-direction: row;
 	align-items: center;
   flex-wrap: wrap;
+  box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: $search-border-radius;
+  color: #555;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  z-index: 1;
+  height: 50px;
 
   & > * {
-    margin-right: 10px;
+	  padding-left: 10px;
   }
 
   .filters {

@@ -26,7 +26,6 @@ export default class MainCtrl {
     } else {
       page = page;
     }
-    console.log(this.searchType);
     this.getData(this.searchInput, page, this.searchType, this.searchYear)
       .then(response => {
         if (response.Error) {

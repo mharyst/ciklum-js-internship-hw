@@ -68,6 +68,11 @@
     padding: 0 20px;
 	  border-radius: $search-border-radius;
     margin-right: 4px;
+    transition: all .3s;
+
+    &:hover {
+      background-color: #23bdce;
+    }
   }
 
   .fav-logo {

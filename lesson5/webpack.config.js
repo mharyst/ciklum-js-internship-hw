@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var webpackConfig = {
   context: path.join(__dirname + '/src'),
@@ -50,6 +51,16 @@ var webpackConfig = {
   },
 
   plugins: [
+    new CopyWebpackPlugin([{
+      from: 'img/',
+      to: 'img/'
+    }, {
+      from: 'fonts/',
+      to: 'fonts/'
+    }, {
+      from: 'css/',
+      to: 'css/'
+    }]),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html'

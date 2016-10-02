@@ -1,0 +1,37 @@
+{
+  "name": "ciklum-js-internship-hw-lesson4",
+  "version": "1.0.0",
+  "description": "Homework for lesson 4",
+  "main": "index.js",
+  "author": "mharyst",
+  "license": "ISC",
+  "scripts": {
+    "start": "SET NODE_ENV=development&&webpack-dev-server --inline --hot --colors",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-resource": "^1.5.3",
+    "angular-route": "^1.5.8",
+    "angular-ui-router": "^0.2.18"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "copy-webpack-plugin": "^3.0.1",
+    "css-loader": "^0.25.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.22.0",
+    "json-loader": "^0.5.4",
+    "node-sass": "^3.9.3",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.1"
+  }
+}

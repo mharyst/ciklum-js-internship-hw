@@ -1,0 +1,31 @@
+<div class="movie-details">
+  <div class="poster">
+    <img src="{{mCtrl.movie.Poster | PosterSource }}" class="poster-img" alt="{{mCtrl.movie.Title}}">
+  </div>
+  <div class="information">
+    <h2>{{mCtrl.movie.Title}}</h2>
+    <div class="middle">
+      <div class="other">
+        <ul class="other-keys">
+          <li>year</li>
+          <li>country</li>
+          <li>director</li>
+          <li>genres</li>
+          <li>duration</li>
+        </ul>
+        <ul class="other-values">
+          <li>{{mCtrl.movie.Year}}</li>
+          <li>{{mCtrl.movie.Country}}</li>
+          <li>{{mCtrl.movie.Director}}</li>
+          <li>{{mCtrl.movie.Genre}}</li>
+          <li>{{mCtrl.movie.Runtime}}</li>
+        </ul>
+      </div>
+      <div class="comments-block">
+        <div class="comments"></div>
+        <div class="send-comment"></div>
+      </div>
+    </div>
+    <p class="plot">{{mCtrl.movie.Plot}}</p>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+/*Fonts*/
+$font-primary: "Open Sans", sans-serif;
+$font-secondary: "bariol", sans-serif;
+
+/*Colors*/
+$color-primary: #ff0044;
+$color-secondary: #21d0e3;
+$color-bg: #06131b;
+
+/*Border radius*/
+$search-border-radius: 23px;
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}

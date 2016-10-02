@@ -1,0 +1,64 @@
+.current-movie {
+  background-color: $color-bg;
+  color: #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  font-weight: 500;
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: row;
+
+  .poster-img {
+    width: 200px;
+    margin-right: 15px;
+    border: 1px solid $color-secondary;
+  }
+
+  .information {
+    display: flex;
+  	flex-direction: column;
+  	justify-content: space-between;
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .other {
+      display: flex;
+      line-height: 1.5;
+      font-size: 14px;
+      margin-right: 40px;
+    }
+
+    .other-keys {
+      color: $color-secondary;
+      margin-right: 60px;
+    }
+  }
+
+  .middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+	  flex-wrap: wrap;
+  }
+
+  .comments-block {
+    width: 300px;
+    height: 100px;
+    background-color: #507b96;
+    align-self: flex-end;
+  }
+
+  .plot {
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+}

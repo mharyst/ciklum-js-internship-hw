@@ -1,9 +1,10 @@
-export default class MainCtrl {
+export default class SearchCtrl {
   /* @ngInject */
   constructor($http, $q, $scope) {
     this.$http = $http;
     this.$q = $q;
     this.searchInput = '';
+    this.searchFlag = false;
     this.refresh();
     this.results = [];
   }
@@ -33,8 +34,14 @@ export default class MainCtrl {
         } else {
           this.pagesCalc(response.totalResults);
           this.checkFav(response.Search);
+          this.searchTotalResults = response.totalResults;
         }
       });
+  }
+
+  clearFav() {
+    localStorage.clear();
+    this.refresh();
   }
 
   toggleFav(film) {
@@ -55,6 +62,7 @@ export default class MainCtrl {
 
   favCount() {
     this.favLength = localStorage.length;
+    console.log(this.favLength);
   }
 
   checkFav(resultsFromSearch) {
@@ -77,7 +85,7 @@ export default class MainCtrl {
     var index;
     this.pages = [];
     for (index = totalPages; index >= 1; --index) {
-        this.pages.unshift(index);
+      this.pages.unshift(index);
     }
   }
 
@@ -91,6 +99,7 @@ export default class MainCtrl {
     this.showFav();
     this.favCount();
     console.log('refreshed');
+    console.log(this.searchContainer);
   }
 
 }

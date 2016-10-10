@@ -10,6 +10,7 @@
 .movie-details {
   display: flex;
   flex-direction: row;
+  align-content: stretch;
 
   .poster-img {
     width: 200px;
@@ -51,9 +52,23 @@
 
   .comments-block {
     width: 300px;
-    height: 100px;
     background-color: #507b96;
+    display: flex;
+  }
+
+  .comments-form {
     align-self: flex-end;
+  	display: flex;
+    width: 100%;
+    align-items: center;
+
+    .comment-text {
+      flex: 4;
+    }
+
+    .btn {
+      flex: 1;
+    }
   }
 
   .plot {

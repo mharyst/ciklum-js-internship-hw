@@ -21,11 +21,14 @@
           <li>{{mCtrl.movie.Runtime}}</li>
         </ul>
       </div>
-      <div class="comments-block">
-        <div class="comments"></div>
-        <div class="send-comment"></div>
-      </div>
     </div>
     <p class="plot">{{mCtrl.movie.Plot}}</p>
+  </div>
+  <div class="comments-block">
+    <ul class="comments"></ul>
+    <form class="comments-form">
+      <textarea class="comment-text" name="name" placeholder="Comment text" ng-model="mCtrl.comment"></textarea>
+      <button type="submit" name="button" class="btn">Send</button>
+    </form>
   </div>
 </div>

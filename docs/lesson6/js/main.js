@@ -86,7 +86,7 @@
 
 	_angular2.default.module("app", ['ngRoute']).service('SearchService', _search2.default).service('FilmByID', _filmByID2.default).service('CommentsService', _comments2.default).filter('PosterSource', _poster2.default).controller('SearchCtrl', _search4.default).controller('MovieCtrl', _movie2.default).config(function ($routeProvider) {
 	  /* @ngInject */
-	  $routeProvider.when('./movie/:id', {
+	  $routeProvider.when('/movie/:id', {
 	    template: __webpack_require__(12),
 	    controller: 'MovieCtrl',
 	    controllerAs: 'mCtrl'

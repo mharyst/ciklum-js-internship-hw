@@ -49,7 +49,7 @@
       </div>
       <div class="container">
         <div class="film-container" id="{{film.imdbID}}" ng-repeat="film in sCtrl.favResults track by $index">
-          <a href="/#/movie/{{film.imdbID}}">
+          <a href="./#/movie/{{film.imdbID}}">
             <img class="poster-img" src="{{film.Poster | PosterSource }}" alt="{{film.Title}}">
             <h3 class="film-title">{{film.Title}}</h3>
             <a href="#" onclick="return false;" class="btn-fav" ng-click="sCtrl.toggleFav(film); sCtrl.refresh()"><i class="fa fa-heart" aria-hidden="true"></i></a>
@@ -75,7 +75,7 @@
       </div>
       <div class="container">
         <div class="film-container" id="{{film.imdbID}}" ng-repeat="film in sCtrl.results | orderBy: sCtrl.orderBy">
-          <a href="/#/movie/{{film.imdbID}}">
+          <a href="./#/movie/{{film.imdbID}}">
             <h3 class="film-title">{{film.Title}}</h3>
             <img class="poster-img" src="{{film.Poster | PosterSource }}" alt="{{film.Title}}">
             <!-- <div class="poster-img" style="background: url({{film.Poster | PosterSource }})"></div> -->

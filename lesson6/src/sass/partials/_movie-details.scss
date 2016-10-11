@@ -22,6 +22,8 @@
     display: flex;
   	flex-direction: column;
   	justify-content: space-between;
+    margin-right: 15px;
+    flex: 4;
 
     h2 {
       font-size: 30px;
@@ -52,8 +54,43 @@
 
   .comments-block {
     width: 300px;
-    background-color: #507b96;
+    background-color: #232d33;
     display: flex;
+    flex-direction: column;
+    flex: 2;
+  }
+
+  .comments {
+    overflow: auto;
+  	flex: 5 1rem;
+
+    li {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 26px;
+      line-height: 26px;
+      box-sizing: border-box;
+      padding: 0 5px;
+    }
+
+    p {
+      font-size: 14px;
+      color: $color-secondary;
+    }
+
+    i {
+      cursor: pointer;
+      transition: all .3s;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+
+    .comment-date {
+      font-size: 11px;
+    }
   }
 
   .comments-form {
@@ -61,9 +98,19 @@
   	display: flex;
     width: 100%;
     align-items: center;
+    border-top: 1px solid #666;
+    flex: 1;
 
     .comment-text {
       flex: 4;
+      background-color: transparent;
+      border: 0;
+      color: #fff;
+      padding: 5px;
+
+      &:focus {
+        outline: 0;
+      }
     }
 
     .btn {

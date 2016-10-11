@@ -27,9 +27,17 @@ section > * {
   border-radius: $search-border-radius;
   transition: all .3s;
   border: 0;
+  cursor: pointer;
+  font-weight: 600;
 
   &:hover {
-    // background-color: #23bdce;
+    background-color: #c30b3c;
+  }
+
+  &:focus,
+  &:active {
+    border: 0;
+    outline: 0;
   }
 }
 

@@ -25,9 +25,15 @@
     <p class="plot">{{mCtrl.movie.Plot}}</p>
   </div>
   <div class="comments-block">
-    <ul class="comments"></ul>
-    <form class="comments-form">
-      <textarea class="comment-text" name="name" placeholder="Comment text" ng-model="mCtrl.comment"></textarea>
+    <ul class="comments">
+      <li ng-repeat="comment in mCtrl.comments | orderBy: '-date'">
+        <span class="comment-date">{{comment.date | date:'HH:mm dd/MM/yy'}}</span>
+        <p>{{comment.text}}</p>
+        <i class="fa fa-close" ng-click="mCtrl.deleteComment(comment.date)"></i>
+      </li>
+    </ul>
+    <form class="comments-form" ng-submit="mCtrl.addComment()">
+      <textarea class="comment-text" name="name" placeholder="Comment text" ng-model="mCtrl.commentText"></textarea>
       <button type="submit" name="button" class="btn">Send</button>
     </form>
   </div>

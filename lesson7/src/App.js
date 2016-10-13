@@ -10,19 +10,43 @@ export default class App extends Component {
         title: 'Rock on',
         service: 'vimeo',
         video: 'https://player.vimeo.com/video/183482793',
-        comments: ['1', '2'],
+        comments: [
+          {
+            id: 1,
+            text:'Cool!!'
+          }, {
+            id: 2,
+            text: 'Nice'
+          }],
       }, {
         id: 2,
         title: 'Common bastard....',
         service: 'vimeo',
         video: 'https://player.vimeo.com/video/148177148',
-        comments: ['1', '2'],
+        comments: [
+          {
+            id: 1,
+            text: 'What\'s the song?'
+          }, {
+            id: 2,
+            text: 'Wow'
+          }],
       }, {
         id: 3,
         title: 'Moving on',
         service: 'vimeo',
         video: 'https://player.vimeo.com/video/151715092',
-        comments: ['1', '2'],
+        comments: [
+          {
+            id: 1,
+            text:'Great'
+          }, {
+            id: 2,
+            text: 'Like it'
+          }, {
+            id: 3,
+            text: ':)'
+          }],
       }]
     }
   }

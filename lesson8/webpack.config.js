@@ -50,7 +50,7 @@ var webpackConfig = {
 
   devServer: {
     host: 'localhost',
-    port: 3030,
+    port: 3000,
     contentBase:  path.join(__dirname + '/src'),
     hot: true
   },

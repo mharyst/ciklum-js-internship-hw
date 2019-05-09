@@ -6,7 +6,7 @@ export default class FilmByID {
   }
 
   getDataByID(id) {
-    return this.$http.get(`https://www.omdbapi.com/?i=${id}&plot=full&r=json&apikey=c2087786`)
+    return this.$http.get(`https://www.omdbapi.com/?i=${id}&plot=full&r=json&apikey=604bc11d`)
     .then(response => response.data)
     .catch((error) => {
       alert('Error');

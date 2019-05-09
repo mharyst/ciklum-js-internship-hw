@@ -32988,7 +32988,7 @@
 	      var type = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
 	      var year = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '';
 
-	      return this.$http.get('https://www.omdbapi.com/?s=' + title + '&page=' + page + '&type=' + type + '&y=' + year + '&r=json&apikey=c2087786').then(function (response) {
+	      return this.$http.get('https://www.omdbapi.com/?s=' + title + '&page=' + page + '&type=' + type + '&y=' + year + '&r=json&apikey=604bc11d').then(function (response) {
 	        return response.data;
 	      }).catch(function (error) {
 	        alert('Error');
@@ -33028,7 +33028,7 @@
 	  _createClass(FilmByID, [{
 	    key: 'getDataByID',
 	    value: function getDataByID(id) {
-	      return this.$http.get('https://www.omdbapi.com/?i=' + id + '&plot=full&r=json&apikey=c2087786').then(function (response) {
+	      return this.$http.get('https://www.omdbapi.com/?i=' + id + '&plot=full&r=json&apikey=604bc11d').then(function (response) {
 	        return response.data;
 	      }).catch(function (error) {
 	        alert('Error');

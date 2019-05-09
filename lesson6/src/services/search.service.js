@@ -6,7 +6,7 @@ export default class SearchService {
   }
 
   getData(title, page, type='', year='') {
-    return this.$http.get(`https://www.omdbapi.com/?s=${title}&page=${page}&type=${type}&y=${year}&r=json&apikey=c2087786`)
+    return this.$http.get(`https://www.omdbapi.com/?s=${title}&page=${page}&type=${type}&y=${year}&r=json&apikey=604bc11d`)
     .then(response => response.data)
     .catch((error) => {
       alert('Error');
